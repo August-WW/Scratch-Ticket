@@ -2,22 +2,22 @@ from colorama import Fore, Style
 import random
 import os
 
-# Function to generate a 3x3 grid with random symbols
+# 3x3 grid with random currency sign symbols: USD, GBP, JPY
 def generate_ticket():
     symbols = ['$', '£', '¥']
     ticket = [[random.choice(symbols) for _ in range(3)] for _ in range(3)]
     return ticket
 
-# Function to display the ticket
+# Display the ticket
 def display_ticket(ticket):
     for row in ticket:
         print(' '.join(row))
 
-# Function to clear the screen
+# Clear the screen after a new ticket is requested
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-# Function to play the game
+# Play
 def play_game():
     while True:
         clear_screen()
